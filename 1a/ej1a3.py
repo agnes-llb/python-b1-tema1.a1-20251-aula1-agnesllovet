@@ -33,8 +33,19 @@ Exemple:
 
 def invert_text(text_chain:str):
     # Write here your code
+    # verificacio que el parametre d'entrada es una string
+    if not isinstance (text_chain,str):
+        raise ValueError ("El parametre d'entrada ha de ser un string")
+    # reseguir cadena en sentit invertit.
+    text_chain_invert=""
+    for iChar in range (len(text_chain)-1,-1,-1):
+        text_chain_invert += text_chain[iChar]
+    print (text_chain_invert)
+    return text_chain_invert    
+
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(invert_text("Hello world!"))
+#print(invert_text("Hello world!"))
+#print(invert_text(3546735))
