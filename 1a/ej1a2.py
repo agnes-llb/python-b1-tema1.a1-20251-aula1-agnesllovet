@@ -43,6 +43,19 @@ Exemple:
 
 def sum_odd_numbers(list_numbers):
     # Write here your code
+    # recorrerem la llista
+    sum_odd_numbers=0
+    for iNumber in list_numbers:
+        if not isinstance(iNumber,int): 
+            raise ValueError ("Los parametros entrados no coinciden con los valores requeridos")
+        elif (iNumber <0):
+                   raise ValueError ("Los parametros entrados no coinciden con los valores requeridos")
+        #mirem si es un numero parell
+        elif (iNumber %2)!=0:
+            sum_odd_numbers+=iNumber
+        # seguim seguent numero     
+    return(sum_odd_numbers)
+
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
