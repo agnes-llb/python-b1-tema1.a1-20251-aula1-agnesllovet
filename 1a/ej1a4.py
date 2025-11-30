@@ -34,9 +34,25 @@ Exemple:
 '''
 
 def count_vowels(text_chain:str):
-    # Write here your code
+    # verificarem que l'entrada es una string
+    if not isinstance (text_chain,str):
+        raise ValueError ("El parametre d'entrada ha de ser un string")    # Write here your code
+    # reseguirem la cadena i anirem detectant les vocals.
+    # definirem un contador de vocals 
+    # convertirem la cadena a minuscules 
+    text_chain=text_chain.lower()
+    #print (text_chain)
+    iCount_vowels=0
+    for iCount in range (0,len(text_chain)):
+        if text_chain[iCount] in ("aeiou"):
+            iCount_vowels +=1
+    #print (iCount_vowels)        
+    return (iCount_vowels)        
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # print(count_vowels("Hello world, this is an example."))
+
+#print (count_vowels("Aeiou"))
+       
