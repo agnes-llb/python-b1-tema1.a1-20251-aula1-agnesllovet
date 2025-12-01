@@ -35,9 +35,18 @@ Exemple:
 """
 
 def obtain_max(list_numbers):
-    # Write here your code
+    # Verificar que els valors d'entrada son el esperats, sinó retornar error
+    # Recorrem la llista
+    for l_num in list_numbers:
+        if (not isinstance(l_num,int)):
+            raise ValueError ("Els parametres d'entrada no son els correctes")
+    # Algoritme per detectar el valor max de la llista
+    # Fem servir funcio mad
+    list_max = max(list_numbers)
+    return list_max
+
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(obtain_max([1, 45, 87, 21, 0, 23, 28]))
+# print(obtain_max([1, 45, 87, "4", 0, 23, 28]))
